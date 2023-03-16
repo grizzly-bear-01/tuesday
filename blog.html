@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>My Blog Site</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet" />
+</head>
+
+<body>
+  <header>
+    <h1 class="title">Quiz <span class="title-2">HERO</span> Blog</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html">Quiz</a></li>
+        <li><a href="#redirect">About</a></li>
+
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <article>
+      <h2>What is the difference in <i>map</i>, <i>filter</i>, <i>forEach</i>, and <i>find</i>?</h2>
+
+      <p>All four functions - map, filter, forEach, and find - are built-in methods in
+        JavaScript that can be
+        used with
+        arrays to perform various operations on their elements. Here are the differences between them:</p>
+      <p><b>map:</b> map method creates a new array by applying a function to each element of the original array. The
+        function
+        returns a new value, and that value is used to create a new array. The length of the new array will always be
+        the same as the original array.
+        <br> Example:
+      <pre>const arr = [1, 2, 3, 4, 5];
+          const newArr = arr.map((num) => num * 2);
+          console.log(newArr); 
+
+          // [2, 4, 6, 8, 10]</pre>
+      </p>
+      <p><b>filter:</b> filter method creates a new array by filtering out the elements that do not meet the criteria
+        specified
+        in a function. The function returns a Boolean value, and only the elements for which the function returns true
+        are included in the new array.
+        <br> Example:
+      <pre>const arr = [1, 2, 3, 4, 5];
+          const newArr = arr.filter((num) => num % 2 === 0);
+          console.log(newArr); 
+
+          // [2, 4]</pre>
+      </p>
+      <p><b>forEach:</b> forEach method applies a function to each element of an array, but it does not create a new
+        array. It
+        simply iterates over the array and executes the provided function for each element.
+        <br> Example:
+
+      <pre>const arr = [1, 2, 3, 4, 5];
+          arr.forEach((num) => console.log(num));
+          
+          // 1
+          // 2
+          // 3
+          // 4
+          // 5</pre>
+      </p>
+      <p><b>find:</b> find method returns the first element in an array that satisfies the specified condition in a
+        function. If
+        no elements satisfy the condition, it returns undefined.
+        <br> Example:
+      <pre>const arr = [1, 2, 3, 4, 5];
+          const result = arr.find((num) => num > 3);
+          console.log(result);
+
+          // 4</pre>
+      </p>
+      <p>map and filter both create new arrays, while forEach does not create a new array, and find returns the
+        first element that satisfies the specified condition. </p>
+
+    </article>
+    <article>
+      <h2>What is the difference in <i>LocalStorage</i>, <i>SessionStorage</i>, and <i>cookies</i>?</h2>
+      <p>LocalStorage, SessionStorage, and cookies are ways that web developers can store information in a user's web
+        browser using JavaScript.</p>
+
+      <p>Think of it like a little box where you can put things in and take them out later. Cookies are like a small box
+        that you can only use for a little while. SessionStorage is like a bigger box that you can use for a longer
+        time, but it goes away when you close your web browser. LocalStorage is like a big box that you can use for a
+        really long time, even after you close your web browser.</p>
+
+      <p>So, if you want to store some information that you only need for a short time, like a username or a shopping
+        cart, you can use cookies. If you want to store some information that you need for a longer time, like a user's
+        preferences, you can use SessionStorage. If you want to store information that you need for a really long time,
+        like a user's login information, you can use LocalStorage.</p>
+    </article>
+    <article>
+      <h2>How does <i>event loop</i> work?</h2>
+      <p>Imagine you're playing a video game where you have to collect coins and avoid obstacles. You press the arrow
+        keys to move your character, and you can only move one step at a time. Now imagine that the video game has to
+        handle other things too, like playing sound effects and keeping track
+        of your score. All of these things are happening at the same time, but your character can only move one step
+        at a time.</p>
+
+      <p>This is a bit like how JavaScript works. JavaScript is a programming language used to create websites and web
+        applications. When you visit a website, the JavaScript code on that website is constantly running in the
+        background, handling things like user interactions, animations, and network requests. The problem is that
+        JavaScript can only do one thing at a time, just like your character in the video game can only move one step
+        at a time. So how does JavaScript handle all of the different things that need to happen at the same time?
+        Enter the Event Loop. The Event Loop is like the traffic cop of the JavaScript world. It makes sure that
+        everything gets done in the right order, without anything getting stuck or delayed.</p>
+
+      <p>Here's how it works: Whenever an event happens in JavaScript (like a button click or a network request), the
+        Event Loop adds that event to a queue. The queue is like a waiting line for events. Meanwhile, the JavaScript
+        code continues to run, doing whatever it needs to do. When it's done, the Event Loop checks the queue to see
+        if there are any events waiting to be processed. If there are, the Event Loop takes the first event in the
+        queue and processes it. Once the event is done, the Event Loop goes back to the queue and takes the next
+        event, and so on. This process continues indefinitely, with events being added to the queue and processed in
+        the order they were added.</p>
+
+      <p>So, just like how you move your character one step at a time in the video game, JavaScript handles events one
+        at a time using the Event Loop. This ensures that everything gets done in the right order, without anything
+        getting stuck or delayed.</p>
+    </article>
+    <article id="trivia">
+      <div>
+        <h2>What does the function <i>quizTimer</i> do in noChange.js file?</h2>
+        <p>The function <i>quizTimer</i> sets a timer that increments a count by 1 every second. It then displays the
+          count in
+          the format of minutes and seconds, and updates the HTML content of an element with the ID count. The
+          <i>covtMin</i>
+          variable calculates the minutes and the mod variable calculates the remaining seconds. The <i>min</i> and
+          <i>countSec</i>
+          variables add leading zeros to the minutes and seconds respectively, to ensure that they are always displayed
+          in a consistent format.
+        </p>
+
+        <p>
+          The if <i>(count > 60)</i> condition checks if the timer has been running for more than 60 seconds. If it has,
+          it
+          changes the color of the text in the <i>countHtml</i> element every 2 seconds to make it more noticeable to
+          the user.
+          If the dismiss parameter is passed to the function as true, the <i>clearInterval()</i> function is called to
+          stop the
+          timer. This can be used to stop the timer when it is no longer needed. </p>
+      </div>
+      <div>
+        <h2>What does the function <i>chooseQuiz</i> do in noChange.js file?</h2>
+        <p>The function <i>chooseQuiz</i> updates or adds an object to an array of quiz answers, and then displays the
+          updated
+          array of answers. </p>
+        <p>The function takes two arguments: <i>index</i> and <i>givenAns</i>. It then checks if there is an object in
+          the answers
+          array that has the same id property as the <i>quizData</i> object at the specified index. If such an object
+          exists,
+          the function replaces that object in the answers array with a new object that has the same properties as the
+          <i>quizData</i> object at the specified index, but with the <i>givenAns</i> property set to the
+          <i>givenAns</i> argument.
+        </p>
+        <p>If there is no object in the answers array with the same id property as the <i>quizData</i> object at the
+          specified
+          index, the function creates a new object with the properties of the <i>quizData</i> object at the specified
+          index, as
+          well as the <i>givenAns</i> property, and pushes it to the answers array. After adding or updating the object
+          in the
+          answers array, the function calls the <i>displayAnswers</i> function, passing in the answers array as an
+          argument.
+        </p>
+
+      </div>
+    </article>
+  </main>
+  <footer id="redirect">
+    Copyright © 2023 Quiz Hero All Rights Reserved.
+  </footer>
+</body>
+
+</html>
