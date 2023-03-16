@@ -1,0 +1,64 @@
+body {
+  background-color: #e3e1da;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+  background-color: #47d756;
+  padding: 20px;
+  margin-bottom: 50px;
+
+}
+
+.title {
+  font-size: 2rem;
+}
+
+.title-2 {
+
+  font-weight: 800;
+  color: rgb(51, 54, 54);
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+}
+
+main {
+  margin: 20px;
+  font-family: 'Rubik', sans-serif;
+}
+
+article {
+  background-color: rgb(235, 240, 235);
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0px 0px 10px #ccc;
+}
+
+#trivia {
+  display: flex;
+  gap: 30px;
+}
+
+footer {
+  background-color: #47d756;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+}
